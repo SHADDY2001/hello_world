@@ -2,12 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout Code') {
-            steps {
-                git 'https://github.com/SHADDY2001/hello_world.git'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t hello-world-app .'
